@@ -254,6 +254,17 @@ code {
 }
 .btn.ghost:hover { border-color: var(--accent); background: rgba(122, 184, 255, 0.06); }
 
+.btn-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--text-faint);
+  letter-spacing: 0.04em;
+  margin-left: 4px;
+  padding-left: 10px;
+  border-left: 1px solid var(--border);
+}
+
 .hero-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
