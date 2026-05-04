@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Manity Health — TRISH HERMES 2023 Submission</title>
+<meta name="description" content="Manity Health Platform — a FHIR-native, decentralized EHR and medical data orchestration platform for dynamic human operating environments. TRISH HERMES 2023 submission." />
+<meta property="og:title" content="Manity Health — TRISH HERMES 2023 Submission" />
+<meta property="og:description" content="Semi-Autonomous Mission Control for Human Health. Built on HL7 FHIR R5 with libp2p, CRDTs, and CDS Hooks." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<canvas id="starfield" aria-hidden="true"></canvas>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text">Manity</span>
+    </a>
+    <nav class="nav-links" aria-label="Section navigation">
+      <a href="#overview">Overview</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#team">Team</a>
+      <a href="#timeline">Timeline</a>
+    </nav>
+    <a class="nav-cta" href="mailto:fil@manity.xyz">Contact</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">
+        <span class="dot"></span>
+        TRISH HERMES 2023 · Application HERMES2301-0000000017
+      </div>
+      <h1>
+        Semi-Autonomous Mission Control<br />
+        <span class="grad">for Human Health.</span>
+      </h1>
+      <p class="lede">
+        The Manity Health Platform is an open, FHIR-native EHR and medical data
+        orchestration system purpose-built for dynamic operating environments —
+        space, military, deep-sea — where connectivity is intermittent,
+        latency is real, and the cost of stale data is human.
+      </p>
+      <div class="hero-cta">
+        <a class="btn primary" href="#architecture">Explore the architecture</a>
+        <a class="btn ghost" href="#capabilities">Capabilities &amp; scenarios</a>
+      </div>
+
+      <div class="hero-stats" role="list">
+        <div role="listitem">
+          <div class="stat-num">FHIR R5</div>
+          <div class="stat-label">HL7 v5.0.0 native data model</div>
+        </div>
+        <div role="listitem">
+          <div class="stat-num">libp2p</div>
+          <div class="stat-label">Decentralized vehicle-to-vehicle sync</div>
+        </div>
+        <div role="listitem">
+          <div class="stat-num">98%</div>
+          <div class="stat-label">SLA target system availability</div>
+        </div>
+        <div role="listitem">
+          <div class="stat-num">CRDT</div>
+          <div class="stat-label">Conflict-free data integrity</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-orbit" aria-hidden="true">
+      <div class="orbit orbit-1"><span></span></div>
+      <div class="orbit orbit-2"><span></span></div>
+      <div class="orbit orbit-3"><span></span></div>
+      <div class="core"></div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section id="overview" class="section">
+    <div class="section-head">
+      <div class="section-eyebrow">01 — Overview</div>
+      <h2>Built for the environments legacy EHRs were never asked to survive.</h2>
+      <p class="section-sub">
+        Manity Health is a groundbreaking Electronic Health Record and Clinical
+        Data Orchestration Platform built on HL7 FHIR. It is the hub for
+        monitoring and managing the health of individuals operating in
+        high-stress, high-stakes environments — deployed on-premises,
+        decentralized by default, and synchronized peer-to-peer as humans move
+        from vehicle to vehicle.
+      </p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <div class="card-icon">🛰</div>
+        <h3>Vehicle-agnostic</h3>
+        <p>
+          Subject data follows the spaceflight participant from vehicle to
+          vehicle via libp2p, mDNS peer discovery, and Gossipsub — automatic,
+          selective, and segmented by tag.
+        </p>
+      </article>
+      <article class="card">
+        <div class="card-icon">🧬</div>
+        <h3>FHIR-native</h3>
+        <p>
+          Every observation, device, specimen, and consent is a first-class
+          FHIR resource — interoperable with the entire US healthcare system
+          out of the box, extensible for the spacecraft.
+        </p>
+      </article>
+      <article class="card">
+        <div class="card-icon">🔐</div>
+        <h3>Privacy by design</h3>
+        <p>
+          HIPAA, GDPR, PIPEDA. End-to-end encryption, pseudonymization,
+          fine-grained consent via the FHIR Consent Resource, and an OAuth 2.0
+          / OpenID Connect identity provider.
+        </p>
+      </article>
+      <article class="card">
+        <div class="card-icon">🤖</div>
+        <h3>CDS Hooks ready</h3>
+        <p>
+          Standardized integration with internal and external evidence-based
+          and AI/ML decision-support models — predictive DSIs for motion
+          sickness, decompression, hydration, radiation, sleep.
+        </p>
+      </article>
+      <article class="card">
+        <div class="card-icon">🪐</div>
+        <h3>Decentralized &amp; resilient</h3>
+        <p>
+          Vector clocks plus Conflict-free Replicated Data Types (CRDTs) keep
+          state consistent across partitions, latency, and total comms
+          blackouts. USB sneakernet bulk export when all else fails.
+        </p>
+      </article>
+      <article class="card">
+        <div class="card-icon">🧩</div>
+        <h3>SMART on FHIR</h3>
+        <p>
+          Bespoke human-factors UIs paired with an App Store of substitutable
+          third-party apps — purpose-built per role and mission, scoped
+          per role and consent.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section id="architecture" class="section dark">
+    <div class="section-head">
+      <div class="section-eyebrow">02 — Architecture</div>
+      <h2>A four-stage pipeline. One canonical data model. Many faces.</h2>
+      <p class="section-sub">
+        Diverse, proprietary, non-standard inputs are normalized into validated
+        FHIR resources via an extensible plugin architecture — buffered,
+        mapped, validated, and committed without coupling ingest concerns to
+        storage or UX.
+      </p>
+    </div>
+
+    <ol class="pipeline">
+      <li>
+        <div class="step-num">01</div>
+        <h3>Ingestion</h3>
+        <p>
+          Plugin architecture accepts HL7 FHIR JSON/XML, HL7 v2.x, X12,
+          NCPDP, CCDA, raw sensor time-series at arbitrary frequencies, and
+          raw video. Encrypted buffer for processing.
+        </p>
+        <code>FHIR · HL7 v2.x · CCDA · X12 · USCDI · proprietary</code>
+      </li>
+      <li>
+        <div class="step-num">02</div>
+        <h3>Normalize · Map · Transform</h3>
+        <p>
+          Mapping repository converts each source format into FHIR resources
+          via standard or custom transformation rules.
+        </p>
+        <code>Observation · Device · DeviceMetric · DiagnosticReport</code>
+      </li>
+      <li>
+        <div class="step-num">03</div>
+        <h3>Validate · Identify · Consent</h3>
+        <p>
+          FHIR profile compliance check, PII matching to known identities, and
+          consent evaluation. Invalid data and unknown entities are logged
+          for handling.
+        </p>
+        <code>FHIR profiles · IdP · Consent Resource · audit</code>
+      </li>
+      <li>
+        <div class="step-num">04</div>
+        <h3>FHIR Repository</h3>
+        <p>
+          Validated resources are persistently stored, indexed, searchable,
+          and exposed via RESTful FHIR APIs to authorized SMART on FHIR apps.
+        </p>
+        <code>Firely Server · SQL Server 2022 · RESTful FHIR API</code>
+      </li>
+    </ol>
+
+    <div class="arch-grid">
+      <div class="arch-block">
+        <h4>Identity Provider</h4>
+        <p>
+          OAuth 2.0 + OpenID Connect. Role-based scopes for patients,
+          researchers, flight control, in-flight medical ops, crew medical
+          officers, and algorithmic users. Least-privilege by default.
+        </p>
+      </div>
+      <div class="arch-block">
+        <h4>Consent Management</h4>
+        <p>
+          FHIR Consent Resource inside the IdP. Patients and research
+          participants get a UI to grant, revoke, and inspect scope. Every
+          consent action is audited as a FHIR AuditEvent.
+        </p>
+      </div>
+      <div class="arch-block">
+        <h4>Decentralization</h4>
+        <p>
+          libp2p for transport, mDNS for peer discovery, Gossipsub for
+          pub/sub. Selective sync via tags — <code>SpacecraftA</code>,
+          <code>G-loads</code>, <code>FlightType</code>, <code>DayInMission</code>.
+        </p>
+      </div>
+      <div class="arch-block">
+        <h4>Data Integrity</h4>
+        <p>
+          Vector clocks track causal order across nodes. CRDTs resolve
+          concurrent updates without central coordination. FHIR versioning
+          + Provenance for chain of custody and rollback.
+        </p>
+      </div>
+      <div class="arch-block">
+        <h4>CDS Hooks</h4>
+        <p>
+          Standardized exchange of clinical and environmental context with
+          external evidence-based and AI/ML knowledge sources — context-aware
+          recommendations within workflows.
+        </p>
+      </div>
+      <div class="arch-block">
+        <h4>Power Optimization</h4>
+        <p>
+          Selective processing on the ingestion pipeline, adaptive sync
+          frequency tuned to network conditions, data compression — engineered
+          for resource-constrained environments.
+        </p>
+      </div>
+    </div>
+
+    <div class="stack">
+      <h4>Reference stack</h4>
+      <div class="stack-grid">
+        <div><span>OS</span><strong>Linux Ubuntu</strong></div>
+        <div><span>Backend</span><strong>.NET</strong></div>
+        <div><span>FHIR Server</span><strong>Firely</strong></div>
+        <div><span>Frontend</span><strong>React</strong></div>
+        <div><span>Database</span><strong>SQL Server 2022</strong></div>
+        <div><span>Web</span><strong>Nginx</strong></div>
+        <div><span>Auth</span><strong>OAuth 2.0 · OIDC</strong></div>
+        <div><span>Streaming</span><strong>Kafka · Flink · NiFi</strong></div>
+        <div><span>Observability</span><strong>Prometheus · Grafana</strong></div>
+        <div><span>Deploy</span><strong>Docker · Kubernetes</strong></div>
+        <div><span>P2P</span><strong>libp2p · CRDT libs</strong></div>
+        <div><span>SBC</span><strong>Intel NUC Pro 12</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES -->
+  <section id="capabilities" class="section">
+    <div class="section-head">
+      <div class="section-eyebrow">03 — Capabilities</div>
+      <h2>Five questions TRISH asked. Five concrete answers.</h2>
+      <p class="section-sub">
+        Direct excerpts from Section B of the Manity HERMES submission — how
+        the platform behaves under the conditions HERMES is designed to test.
+      </p>
+    </div>
+
+    <div class="qa">
+      <details open>
+        <summary>
+          <span class="q-num">Q1</span>
+          Ingesting non-standard, never-before-seen device data
+        </summary>
+        <div class="q-body">
+          <p>
+            For a hypothetical proprietary cabin-humidity sensor streaming XML
+            time-series at 1 Hz over TCP/IP LLP, Manity develops a tailored
+            ingestion plugin. Raw data is buffered, then walked through the
+            four-stage pipeline — mapped to FHIR via the data-mapping library,
+            validated against FHIR profiles, associated to identity and
+            consent, and stored as searchable FHIR resources behind the
+            RESTful FHIR API.
+          </p>
+          <p>
+            Out of the box, Manity ships connectors for HL7 FHIR, HL7 v2.x,
+            CCDA v1/v2, USCDI, and X12.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="q-num">Q2</span>
+          International participants &amp; cross-jurisdictional privacy
+        </summary>
+        <div class="q-body">
+          <p>
+            Privacy-by-Design baked into the core: data minimization, PII
+            pseudonymization, right to access, right to erasure, segmentation,
+            and data portability. Data may be segmented per subject
+            jurisdictional authority. DPAs with third-party processors;
+            DPIAs to surface and mitigate risk.
+          </p>
+          <p>
+            FHIR's global terminology and regional adaptations enable
+            integration of data from diverse EHRs and HIEs. The IdP enforces
+            fine-grained, permission-based access via OAuth 2.0 + OIDC.
+            Consent is managed in a dedicated layer, allowing participants to
+            track and revise privacy consents as required by GDPR and other
+            regional regulations.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="q-num">Q3</span>
+          Following the participant from vehicle to vehicle
+        </summary>
+        <div class="q-body">
+          <p>
+            Peer-to-peer sync via libp2p, mDNS, and Gossipsub. Vector clocks
+            track causal order; CRDTs resolve concurrent updates; FHIR
+            resources are extended with the metadata both require. When the
+            participant boards a new vehicle, the new instance discovers the
+            previous instance via mDNS and synchronizes via Gossipsub.
+          </p>
+          <p>
+            Tagging — <code>patient-data</code>, <code>mission-data</code>,
+            <code>research-data</code>, environment-specific tags — enables
+            selective sync. The new vehicle pulls only the participant's
+            health data, leaving mission and research data on the prior peer.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="q-num">Q4</span>
+          Autonomous comparison against preloaded baselines
+        </summary>
+        <div class="q-body">
+          <p>
+            Preflight and prior-vehicle data is ingested as FHIR via the same
+            pipeline. The FHIR Provenance resource captures origin and
+            history; tags by phase, vehicle, and mission stage make it
+            queryable. ML and CDS systems integrate via CDS Hooks with full
+            clinical and environmental context.
+          </p>
+          <p class="callout-label">Limitations explicitly named:</p>
+          <ul>
+            <li>Data quality of the source feeds</li>
+            <li>Latency, timeliness, and power constraints in-flight</li>
+            <li>Interpretability of complex ML/CDS output</li>
+            <li>Algorithmic bias on small spacefaring sample sizes</li>
+            <li>Translational research gaps in space-environment health</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="q-num">Q5</span>
+          Vehicle environmental data — O₂, CO₂, vibration, radiation, water
+        </summary>
+        <div class="q-body">
+          <p>
+            Subject-attributable measurements (ambient O₂, CO₂, temperature,
+            humidity, radiation exposure) flow into FHIR Observation resources
+            scoped to the participant. Vehicle-general measurements
+            (vibration, gravitational loads, toxin detection, surface
+            contaminants, water quality) flow into FHIR Device and
+            DeviceMetric resources, linked to mission context via custom
+            extensions and tags.
+          </p>
+          <p>
+            Both shapes coexist in the same FHIR repository — allowing
+            real-time correlation of environment to subject without losing
+            either lens.
+          </p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" class="section dark">
+    <div class="section-head">
+      <div class="section-eyebrow">04 — Team</div>
+      <h2>Two operators with three decades of healthcare-IT scar tissue.</h2>
+    </div>
+
+    <div class="team">
+      <article class="bio">
+        <div class="bio-head">
+          <div class="bio-avatar" aria-hidden="true">FS</div>
+          <div>
+            <h3>Fillipe E. Southerland</h3>
+            <div class="bio-role">Founder &amp; Principal Investigator</div>
+          </div>
+        </div>
+        <p>
+          Director of Healthcare Solutions at Yardi Systems, leading product
+          for an EHR platform managing <strong>500k+</strong> resident records
+          across the US LTPAC sector. Co-founder and CTO of ALMSA (2002–2012),
+          one of the first LTPAC-focused EMRs, exited to Yardi.
+        </p>
+        <ul class="bio-list">
+          <li>Appointed by the GAO to the federal HHS Health IT Advisory Committee (HITAC), advising ONC on the HTI-1 rule on algorithmic transparency and predictive decision-support interventions</li>
+          <li>Member of the Choctaw Nation; Sequoyah Fellow, American Indian Science &amp; Engineering Society</li>
+          <li>BS Computer Engineering, Cal Poly San Luis Obispo</li>
+          <li>Member, Carequality patient-matching workgroup; IAPP member</li>
+          <li>Presenter, TechCrunch Disrupt Space 2020</li>
+        </ul>
+      </article>
+
+      <article class="bio">
+        <div class="bio-head">
+          <div class="bio-avatar" aria-hidden="true">RN</div>
+          <div>
+            <h3>Roger Ngo</h3>
+            <div class="bio-role">Co-Founder &amp; Technical Lead</div>
+          </div>
+        </div>
+        <p>
+          Senior Software Engineer at Microsoft, technical lead for the
+          message composition experience in Microsoft Teams. Performance,
+          memory, and observability across systems processing
+          <strong>billions</strong> of monthly transactions.
+        </p>
+        <ul class="bio-list">
+          <li>Lead front-end engineer, IBM Cloud Direct Link — pub/sub model for SoftLayer network hardware</li>
+          <li>Software Engineer, Front App — owned the OAuth stack for the JIRA plugin</li>
+          <li>Technical lead for the Yardi EHR Interfaces engine — pharmacy and partner integrations</li>
+          <li>MS Computer Science, University of Illinois Urbana-Champaign · BS Computer Science, UC Santa Barbara</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="company">
+      <div>
+        <h4>About Manity</h4>
+        <p>
+          Founded 2020. Minority-owned Delaware C Corporation. Mission:
+          actively engage with clients and stakeholders to deploy the world's
+          most advanced health platform supporting human endeavors in
+          complex and challenging domains — space, deep-sea exploration, and
+          military operations.
+        </p>
+      </div>
+      <div class="company-meta">
+        <div><span>Founded</span><strong>2020</strong></div>
+        <div><span>Structure</span><strong>Delaware C-Corp</strong></div>
+        <div><span>Classification</span><strong>Minority-owned</strong></div>
+        <div><span>Servers</span><strong>U.S.-based</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="timeline" class="section">
+    <div class="section-head">
+      <div class="section-eyebrow">05 — Year-1 Plan</div>
+      <h2>Twelve months. Five milestones. A flight-ready platform.</h2>
+      <p class="section-sub">
+        The Year 1 cadence proposed to TRISH, ending in a HERMES Section II
+        demonstration in Spring 2024 with documentation covering data
+        storage, communication protocols, APIs, and governance models.
+      </p>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-marker">Q2 '23</div>
+        <div class="tl-body">
+          <h3>Requirements &amp; design</h3>
+          <p>
+            Finalize project requirements, system architecture, and design
+            documentation. Stand up development and testing environments.
+          </p>
+          <div class="tl-deliverable">
+            Demonstration of medical, research, and environmental data
+            aggregation; immediate availability to local users; transfer
+            from a source HERMES instance to a destination instance.
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-marker">Q3 '23</div>
+        <div class="tl-body">
+          <h3>Integrations &amp; UI</h3>
+          <p>
+            Implement integrations with external data sources. Develop
+            user interfaces for patient, researcher, flight control, and
+            in-flight medical roles.
+          </p>
+          <div class="tl-deliverable">
+            Alpha release — basic core functionality, role UIs, preliminary
+            HERMES support.
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-marker">Q4 '23</div>
+        <div class="tl-body">
+          <h3>Peer-to-peer sync</h3>
+          <p>
+            Implement P2P data synchronization. Alpha is feature-complete.
+          </p>
+          <div class="tl-deliverable">
+            Beta release — required platform features, security measures,
+            initial third-party integration capabilities.
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-marker">Q1 '24</div>
+        <div class="tl-body">
+          <h3>Hardening</h3>
+          <p>
+            Extensive testing, performance optimization, bug fixing.
+            Comprehensive documentation, training materials, user guides.
+          </p>
+          <div class="tl-deliverable">
+            Release candidate — fully functional platform ready for
+            real-world deployment.
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-marker">Q2 '24</div>
+        <div class="tl-body">
+          <h3>Flight readiness</h3>
+          <p>
+            Gather user feedback and refine for flight readiness.
+          </p>
+          <div class="tl-deliverable">
+            HERMES 2023 RFI Section II demonstration; documentation covering
+            data storage plan, communication protocols, APIs, and governance
+            models.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sla">
+      <h4>Service-Level Targets</h4>
+      <div class="sla-grid">
+        <div><span class="sla-num">98%</span><span>System availability</span></div>
+        <div><span class="sla-num">4 h</span><span>Recovery Time Objective</span></div>
+        <div><span class="sla-num">1 h</span><span>Recovery Point Objective</span></div>
+        <div><span class="sla-num">2 h</span><span>Incident initial response</span></div>
+        <div><span class="sla-num">24/7</span><span>Mission &amp; critical support</span></div>
+        <div><span class="sla-num">FIPS-199</span><span>Information system categorization</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section id="roadmap" class="section dark">
+    <div class="section-head">
+      <div class="section-eyebrow">06 — Beyond 2024</div>
+      <h2>Roadmap toward HERMES 2028 and the broader space-health stack.</h2>
+    </div>
+    <ul class="roadmap">
+      <li>ONC Certified HIT certification — maximize interoperability with the US healthcare system</li>
+      <li>TRISH EXPAND database and NASA HRP MDA integration</li>
+      <li>Continued CDS Hooks development for predictive (AI/ML) and evidence-based DSI models</li>
+      <li>Purpose-built interfaces for spaceflight participant use cases — user-centric &amp; human-factors design</li>
+      <li>Just-in-time training content tied to specific mission events and parameters</li>
+      <li>Research use-case management — research scopes, enrolled/consented research, planned training</li>
+      <li>Standards-based and proprietary sensor and spacecraft system integrations</li>
+      <li>Device provisioning capabilities for shared-device use cases</li>
+      <li>Closed-loop interventions workflows based on countermeasures and CMO input</li>
+      <li>Interventions supply tracking — consumables and medications</li>
+      <li>Continued evolution and adoption of forthcoming FHIR standards</li>
+      <li>Real-time biomedical and environmental telemetry to autonomously surface participant issues</li>
+    </ul>
+  </section>
+
+  <!-- COMPLIANCE -->
+  <section id="compliance" class="section">
+    <div class="section-head">
+      <div class="section-eyebrow">07 — Compliance</div>
+      <h2>FAIR-Health, FIPS-199, and the privacy regimes that matter.</h2>
+    </div>
+    <div class="compliance-grid">
+      <div class="compliance-card"><h4>HIPAA</h4><p>End-to-end encryption, fine-grained access control, full audit trail.</p></div>
+      <div class="compliance-card"><h4>GDPR</h4><p>Data minimization, pseudonymization, right to access, erasure, portability.</p></div>
+      <div class="compliance-card"><h4>FIPS-199</h4><p>Information-system categorization for confidentiality, integrity, availability.</p></div>
+      <div class="compliance-card"><h4>FAIR-Health</h4><p>Findable, Accessible, Interoperable, Reusable health data re-use.</p></div>
+      <div class="compliance-card"><h4>USCDI</h4><p>Standardized API for patient and population services aligned with ONC.</p></div>
+      <div class="compliance-card"><h4>U.S.-located servers</h4><p>All servers utilized for the effort located in the United States.</p></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <strong>Manity, Inc.</strong>
+      </div>
+      <div class="footer-meta">
+        <div>TRISH HERMES 2023 — Application HERMES2301-0000000017</div>
+        <div>Submitted May 10, 2023 · Estimated period May 2023 – Apr 2024</div>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:fil@manity.xyz">fil@manity.xyz</a>
+        <a href="https://github.com/filman/manityhermes">GitHub</a>
+      </div>
+    </div>
+    <div class="footer-fine">
+      © Manity, Inc. The Manity Health Platform, FHIR resources, and platform
+      design are described here for the purposes of the TRISH HERMES 2023
+      solicitation submission.
+    </div>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
